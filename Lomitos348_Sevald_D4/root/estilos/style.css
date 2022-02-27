@@ -7,6 +7,7 @@
 /*VISTA INICIAL: BREAK POINT hasta 320px de ancho */
 
 
+    /*BODYS*/
 
     .bodyIndex{
         background-image: url("../img/mosaico348.png");
@@ -20,6 +21,24 @@
         "texto"
         "titulo"
         "info"
+        "pie";
+        
+        grid-template-rows: auto;
+        
+    }
+
+
+    .bodyNosotros{
+        background-image: url("../img/mosaico348.png");
+        background-repeat: repeat;
+
+        display: grid;
+        grid-template-areas:
+        "banner"
+        "navmenu"
+        "titulo"
+        "nosotros"
+        
         "pie";
         
         grid-template-rows: auto;
@@ -49,6 +68,25 @@
     }
 
 
+    .bodyContacto{
+        background-image: url("../img/mosaico348.png");
+        background-repeat: repeat;
+
+        display: grid;
+        grid-template-areas:
+        "banner"
+        "navmenu"
+        "texto"
+        "foto"
+        "titulo"
+        "franquicia"
+        "pie";
+        
+        grid-template-rows: auto;
+        
+    }
+
+    /*HEADER y NAV*/
 
     header{
         grid-area: banner;
@@ -71,6 +109,24 @@
     }
 
 
+    /*DIV Principales*/
+
+
+    .divTituloSeccion{
+
+        width: 100%;
+        
+        grid-area: titulo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+    }
+
+
     .divFoto{
 
         grid-area: foto;
@@ -84,9 +140,6 @@
         
     }
 
-
-
-
     .divTexto{
 
         grid-area: texto;
@@ -98,6 +151,37 @@
         text-align: left;
 
         padding-bottom: 1rem;
+
+    }
+
+    .divNosotros{
+
+        grid-area: nosotros;
+
+        /*background-color: forestgreen;*/
+        width: 90%;
+
+        justify-self: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .divTextoNos{
+
+        
+        /*background-color: rgb(187, 80, 248);width: 90%;*/
+
+        display: flex;
+        flex-direction: column;
+
+
+        text-align: left;
+
+        padding-bottom: 1rem;
+        padding-top: 1rem;
 
     }
 
@@ -148,7 +232,37 @@
         
     }
 
+    .divForms {
+        /*background-color: #BA3A32;*/
+        width: 90%;
 
+        
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    
+    }
+
+
+    .divFranqui{
+
+        grid-area: franquicia;
+
+        /*background-color: forestgreen;*/
+        width: 80%;
+
+        justify-self: center;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /*FOOTER*/
 
     footer{
         grid-area: pie;
@@ -165,21 +279,7 @@
 
 
 
-    /*Especificos PRODUCTOS*/
-
-    .divTituloProductos{
-
-        width: 100%;
-        
-        grid-area: titulo;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
-    }
+    /*Especificos PRODUCTOS y SUCURSALES*/
 
 
     .divProductos{
@@ -244,6 +344,16 @@
     }
 
 
+    .imgSucursal{
+
+        width: 70%;
+        border-radius: 10px;
+        border-color: rgb(104, 17, 17);
+        border-style: solid;
+    
+    }
+
+
 
 
     /*ELEMENTOS HEADER y NAV*/
@@ -274,7 +384,7 @@
 
 
 
-    /*ELEMENTOS CUERPO*/
+    /*Tipos de PARRAFOS*/
 
     .pTextIndex{
 
@@ -284,6 +394,38 @@
         padding-top: 3%;
 
     }
+
+
+    .pTextNosotros{
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 13pt;
+        
+        padding-top: 1%;
+        text-align: justify;
+
+    }
+
+
+    .pTextFranqui{
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12pt;
+        padding-left: 1rem;
+        padding-bottom: 3%;
+
+    }
+
+    .pInfo{
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 11pt;
+        padding-top: 8pt;
+
+    }
+
+
+    /*Tipos de TITULOS*/
 
 
     h1{
@@ -322,13 +464,7 @@
 
 
 
-    .pInfo{
-
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 11pt;
-        padding-top: 8pt;
-
-    }
+    /*OTROS ELEMENTOS*/
 
 
     .imgIndex{
@@ -346,6 +482,22 @@
 
     .ico{
         height: 60%;
+    }
+
+
+    .formContact{
+
+        /*background-color: rgb(77, 220, 20);*/
+        width: 100%;
+        
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        
     }
 
 
@@ -537,10 +689,40 @@
     }
 
 
+    .bodyContacto{
+        
+        display: grid;
+        grid-template-areas:
+        "banner banner"
+        "navmenu navmenu"
+        "texto foto"
+        "titulo titulo"
+        "franquicia franquicia"
+        "pie pie";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto;
+        
+    }
+
+
+    .divNosotros{
+
+        /*background-color: rgb(123, 139, 34);*/
+        width: 80%;
+
+        
+    }
+
+    
+
+
     .divProductos{
 
         grid-area: producto producto1;
         /*background-color: rgba(65, 212, 175, 0.87);*/
+
+        width: 95%;
+        justify-self: center;
 
         grid-template-columns: 50% 50%;
         
@@ -561,6 +743,20 @@
 
         padding: 1rem 1rem 1rem 1rem;
 
+    }
+
+
+    .divForms {
+        /*background-color: #BA3A32;*/
+        
+
+        
+
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+
+    
     }
 
     .imgProducto{
@@ -699,6 +895,19 @@
 
         /*background-color: cadetblue;*/
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+
+    .div_divBloque{
+
+
+        width: 80%;
+        /*background-color: rgb(95, 112, 160);*/
+        text-align: left;
         display: flex;
         flex-direction: column;
         align-items: center;
