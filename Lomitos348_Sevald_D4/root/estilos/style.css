@@ -90,7 +90,8 @@
 
     header{
         grid-area: banner;
-        background-color: #BA3A32;
+        /*background-color: #ba3a32;*/
+        background-image: linear-gradient(#ba3a32, #e9483c);
         text-align: center;
         padding-bottom: 10px;
         
@@ -266,16 +267,14 @@
 
     footer{
         grid-area: pie;
-        background-color:#BA3A32;
+        /*background-color:#BA3A32;*/
+        background-image: linear-gradient(#BA3A32, #8f2c25);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: azure;
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 2rem;
 
-        
-
-        
     }
 
 
@@ -333,26 +332,47 @@
 
         font-size: 14pt;
         padding-top: 1rem;
+        text-align: center;
     }
 
 
     .imgProducto{
 
-        width: 90%;
+        width: 80%;
         border-radius: 10px;
         border-color: rgb(129, 111, 71);
         border-style: solid;
-    
+
+        transition: width 1s;
+    }
+
+    .imgProducto:hover{
+
+        width: 90%;
+        border-color: rgb(190, 145, 47);
+        transform: rotate(358deg);
+
     }
 
 
     .imgSucursal{
 
-        width: 70%;
+        width: 80%;
         border-radius: 10px;
         border-color: rgb(104, 17, 17);
         border-style: solid;
+
+        transition: width 1s;
     
+    }
+
+
+    .imgSucursal:hover{
+
+        width: 90%;
+        border-color: rgb(170, 34, 34);
+        transform: rotate(358deg);
+
     }
 
 
@@ -444,8 +464,25 @@
         font-size: 14pt;
         color: whitesmoke;
 
+        animation-duration: 2.5s;
+        animation-name: aparece;
+        animation-iteration-count: initial;
+
     }
 
+    /* ANIMACIÓN */
+
+        @keyframes aparece {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+       
+    /* fin ANIMACIÓN */
 
     h3{
         font-family: 'DM Serif Text', serif;
@@ -483,6 +520,14 @@
 
 
     .ico{
+        height: 50%;
+    
+        transition: height 1s;
+    }
+
+
+    .ico:hover{
+
         height: 60%;
     }
 
@@ -518,7 +563,7 @@
     }
 
     .liFooter{
-    color:#5c1c18;
+    color:#e2918b;
     display: inline-block;
     width: 50px;
     position: relative;
@@ -526,7 +571,7 @@
     }
 
     .aFooter{
-    color:#5c1c18;
+    color:#e2918b;
     text-decoration: none;
     font-size: small;
 
@@ -660,8 +705,19 @@
 
 
     .ico{
+        height: 70%;
+
+        transition: height 1s;
+    }
+
+
+    .ico:hover{
+
         height: 80%;
     }
+
+
+    
 
     span{
         color: #BA3A32;
@@ -763,9 +819,36 @@
 
     .imgProducto{
 
-        width: 70%;
+        width: 80%;
         border-radius: 10px;
     
+    }
+
+    .imgProducto:hover{
+
+        width: 90%;
+        border-color: rgb(190, 145, 47);
+        transform: rotate(358deg);
+
+    }
+
+
+
+
+    .imgSucursal{
+
+        width: 80%;
+        border-radius: 10px;
+    
+    }
+
+
+    .imgSucursal:hover{
+
+        width: 90%;
+        border-color: rgb(170, 34, 34);
+        transform: rotate(358deg);
+
     }
 
 
@@ -823,6 +906,8 @@
 
     }
 
+    
+
 
     h1{
         font-family: 'DM Serif Text', serif;
@@ -842,7 +927,15 @@
         padding-top: 2rem;
         padding-bottom: 0%;
         padding-left: 1rem;
+
+        transition: width 1s;
         
+    }
+
+
+    .divFoto:hover{
+
+        width: 90%;
     }
 
     
